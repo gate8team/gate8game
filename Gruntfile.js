@@ -5,7 +5,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             build: {
-                src: ['static/js/libs/*.js', 'static/js/main.js'],
+                src: ['static/js/game/models/person.js',
+                    'static/js/game/models/hero.js',
+                    'static/js/libs/*.js',
+                    'static/js/game/game.js',
+                    'static/js/main.js'],
                 dest: 'static/js/build/gate8team.min.js'
             }
         }
