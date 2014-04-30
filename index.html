@@ -5,25 +5,37 @@
     <title>gate8game</title>
 
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+        }
+
         #game_div {
-            width: 960px;
-            margin: auto;
-            margin-top: 50px;
+            width: 1000px;
+            height: 213px;;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin: -106px 0 0 -500px;
         }
     </style>
 
-    <!--<script type="text/javascript" src="./static/js/libs/phaser-2.0.3.min.js"></script>-->
-    <!--<script type="text/javascript" src="./static/js/game/models/person.js"></script>-->
-    <!--<script type="text/javascript" src="./static/js/game/models/hero.js"></script>-->
-    <!--<script type="text/javascript" src="./static/js/game/game.js"></script>-->
-    <!--<script type="text/javascript" src="./static/js/main.js"></script>-->
-    <script type="text/javascript" src="./static/js/build/gate8team.min.js"></script>
+    <script type="text/javascript" src="./static/js/libs/phaser-2.0.3.min.js"></script>
+    <script type="text/javascript" src="./static/js/game/models/person.js"></script>
+    <script type="text/javascript" src="./static/js/game/models/hero.js"></script>
+    <script type="text/javascript" src="./static/js/game/gamestates/gamestate.js"></script>
+    <script type="text/javascript" src="./static/js/game/gamestates/gslevelone.js"></script>
+    <script type="text/javascript" src="./static/js/game/game.js"></script>
+    <script type="text/javascript" src="./static/js/main.js"></script>
+    <!--<script type="text/javascript" src="./static/js/build/gate8team.min.js"></script>-->
 </head>
-
-<body>
-
-<div id="game_div"> </div>
-
+<body style="background: #000;">
+    <div id="game_div"></div>
 </body>
-
 </html>
