@@ -6,3 +6,4 @@ function Person(name, spriteUrl){
 Person.prototype.xSpeed = 20;
 Person.prototype.ySpeed = 20;
 Person.prototype.gravity = 500;
+Person.prototype.health = 100;

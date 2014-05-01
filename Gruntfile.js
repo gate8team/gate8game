@@ -7,7 +7,10 @@ module.exports = function(grunt) {
             build: {
                 src: ['static/js/game/models/person.js',
                     'static/js/game/models/hero.js',
+                    'static/js/game/models/background.js',
                     'static/js/libs/*.js',
+                    'static/js/game/gamestates/gamestate.js',
+                    'static/js/game/gamestates/gslevelone.js',
                     'static/js/game/game.js',
                     'static/js/main.js'],
                 dest: 'static/js/build/gate8team.min.js'

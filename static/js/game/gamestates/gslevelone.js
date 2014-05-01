@@ -1,18 +1,19 @@
 var gsLevelOne = Object.create(GameStateCreator);
 
-gsLevelOne.init = function(hero, enemies){
+gsLevelOne.init = function(hero, enemies, background){
     this.prototype.hero = hero;
     this.prototype.enemies = enemies;
+    this.prototype.backgroundSprite = background;
 };
 
 gsLevelOne.prototype.preload = function(){
-    this.game.stage.backgroundColor = '#71c5cf';
+    this.game.stage.backgroundColor = this.backgroundSprite.color;//'#71c5cf';
     this.game.load.spritesheet(this.hero.name, this.hero.spriteUrl, 70, 70, 30);
-    this.game.load.image("background", "static/i/new.png");
+    this.game.load.image(this.backgroundSprite.name /*"background"*/, this.backgroundSprite.backgroundUrl /*"static/i/new.png"*/);
 };
 
 gsLevelOne.prototype.create = function(){
-    this.background = this.game.add.tileSprite(0, 0, 1000, 400, "background");
+    this.background = this.game.add.tileSprite(0, 0, 1000, 400, this.backgroundSprite.name);
     this.player = this.game.add.sprite(0, this.game.world.height - 150, this.hero.name);
     this.game.physics.arcade.enable(this.player);
     this.player.body.bounce.y = 0;
